@@ -27,6 +27,7 @@ class Reader(Base):
 
 class BookIssue(Base):
     __tablename__ = 'book_issues'
+    """ Модель для учёта выдачи книг """
     id = Column(Integer, primary_key=True, index=True)
     book_id = Column(Integer, ForeignKey('books.id'))
     reader_id = Column(Integer, ForeignKey('readers.id'))
